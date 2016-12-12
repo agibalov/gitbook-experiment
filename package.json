@@ -1,0 +1,21 @@
+{
+  "name": "gitbook-experiment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node_modules/.bin/gitbook serve src",
+    "html": "node_modules/.bin/gitbook build src dist",
+    "pdf": "node_modules/.bin/gitbook pdf src dist/book.pdf",
+    "epub": "node_modules/.bin/gitbook epub src dist/book.epub",
+    "mobi": "node_modules/.bin/gitbook mobi src dist/book.mobi",
+    "build": "npm run-script html && npm run-script pdf && npm run-script epub && npm run-script mobi",
+    "clean": "rm -rf dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gitbook-cli": "^2.3.0"
+  }
+}
